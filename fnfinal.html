@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortnite: The Island - Battle Royale & Beyond</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font and game-inspired colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'fortnite-blue': '#007bff',
+                        'fortnite-dark': '#121212',
+                        'fortnite-gray': '#282828',
+                        'fortnite-accent': '#6f42c1', // Purple/Violet accent
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Inter Font Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom scrollbar for a darker theme */
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom text shadow for titles */
+        .text-shadow-fortnite {
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 10px #6f42c177;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(111, 66, 193, 0.4);
+            border-color: #6f42c1;
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-fortnite-dark/95 backdrop-blur-sm shadow-xl border-b border-fortnite-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Title -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-3xl font-black text-fortnite-blue tracking-wider">
+                        FORT<span class="text-fortnite-accent">NITE</span>
+                    </a>
+                </div>
+                <!-- Menu Items -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#battle-royale" class="text-gray-300 hover:text-white transition duration-200 hover:scale-105 font-medium">Battle Royale</a>
+                    <a href="#the-island" class="text-gray-300 hover:text-white transition duration-200 hover:scale-105 font-medium">The Island</a>
+                    <a href="#skins" class="text-gray-300 hover:text-white transition duration-200 hover:scale-105 font-medium">Skins & Gear</a>
+                    <a href="#creative" class="text-gray-300 hover:text-white transition duration-200 hover:scale-105 font-medium">Creative Mode</a>
+                </div>
+                <!-- Action Button -->
+                <div class="hidden md:block">
+                    <button class="px-4 py-2 bg-fortnite-accent hover:bg-purple-700 text-white font-bold rounded-lg shadow-lg transition duration-300 ease-in-out">
+                        Play Now
+                    </button>
+                </div>
+                <!-- Mobile Menu Button (Hamburger) - Not fully functional in this single file, but visually present -->
+                <div class="md:hidden">
+                    <button class="text-gray-400 hover:text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-12">
+        
+        <!-- 1. Hero Section -->
+        <section class="relative h-96 lg:h-[60vh] flex items-center justify-center overflow-hidden mb-16">
+            <!-- Background Image -->
+            <img 
+                src="https://placehold.co/1600x900/1e293b/FFFFFF/png?text=Fortnite+Chapter+Island+Header" 
+                alt="Epic Fortnite Battle Royale Landscape"
+                class="absolute inset-0 w-full h-full object-cover opacity-50 blur-sm"
+                onerror="this.onerror=null; this.src='https://placehold.co/1600x900/1e293b/FFFFFF/png?text=Fortnite+Landscape';"
+            >
+            <div class="relative z-10 text-center p-6 bg-fortnite-dark/50 rounded-xl">
+                <h1 class="text-6xl md:text-8xl font-black text-white uppercase text-shadow-fortnite">
+                    The Battle is <span class="text-fortnite-blue">Built</span>
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl text-gray-300 font-semibold">
+                    Explore, build, and fight to be the last one standing.
+                </p>
+                <a href="#battle-royale" class="mt-8 inline-block px-8 py-3 bg-fortnite-blue hover:bg-blue-700 text-white text-lg font-bold rounded-full transition duration-300 transform hover:scale-105 shadow-xl">
+                    Discover More
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Battle Royale Section -->
+        <section id="battle-royale" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <h2 class="text-5xl font-extrabold text-center text-fortnite-blue mb-12 text-shadow-fortnite">
+                BATTLE ROYALE: THE CORE
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="bg-fortnite-gray p-8 rounded-xl border-2 border-fortnite-accent/50 card-hover transition duration-300">
+                    <h3 class="text-3xl font-bold mb-4 text-white">Zero Build vs. Building</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Choose your fight. Master the art of rapid construction to gain the high ground and defend yourself in the classic mode, or jump into Zero Build for a pure, gun-on-gun survival experience. Both modes offer the same iconic map and chaotic fun, but require vastly different strategies.
+                    </p>
+                    <ul class="list-disc list-inside mt-4 text-gray-400 space-y-1">
+                        <li>Classic Mode: Resource gathering and strategic defense.</li>
+                        <li>Zero Build: Focus on positioning and map awareness.</li>
+                        <li>Daily and weekly quests for XP and rewards.</li>
+                    </ul>
+                </div>
+                <div>
+                    <!-- Image related to gameplay/building -->
+                    <img 
+                        src="https://placehold.co/600x400/374151/FFFFFF/png?text=Gameplay+Shot" 
+                        alt="Fortnite building battle screenshot"
+                        class="w-full h-auto rounded-xl shadow-2xl border-4 border-fortnite-gray"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/374151/FFFFFF/png?text=Fortnite+Action';"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. The Island & Lore Section -->
+        <section id="the-island" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <h2 class="text-5xl font-extrabold text-center text-fortnite-accent mb-12 text-shadow-fortnite">
+                THE ISLAND: MYTHS & LOCATIONS
+            </h2>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Location Card 1 -->
+                <div class="bg-fortnite-gray rounded-xl overflow-hidden shadow-lg border border-fortnite-gray card-hover transition duration-300">
+                    <img 
+                        src="https://placehold.co/400x250/343a40/FFFFFF/png?text=Tilted+Towers" 
+                        alt="Image of Tilted Towers"
+                        class="w-full h-40 object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x250/343a40/FFFFFF/png?text=Location+1';"
+                    >
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold text-white mb-2">Tilted Towers</h4>
+                        <p class="text-sm text-gray-400">The most legendary drop spot. High risk, high reward. A true test of fast reflexes and close-quarters combat.</p>
+                    </div>
+                </div>
+
+                <!-- Location Card 2 -->
+                <div class="bg-fortnite-gray rounded-xl overflow-hidden shadow-lg border border-fortnite-gray card-hover transition duration-300">
+                    <img 
+                        src="https://placehold.co/400x250/495057/FFFFFF/png?text=Loot+Lake" 
+                        alt="Image of Loot Lake"
+                        class="w-full h-40 object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x250/495057/FFFFFF/png?text=Location+2';"
+                    >
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold text-white mb-2">Loot Lake</h4>
+                        <p class="text-sm text-gray-400">The calm center of the map, often hiding secrets and serving as a key rotation point for the final circles.</p>
+                    </div>
+                </div>
+
+                <!-- Location Card 3 -->
+                <div class="bg-fortnite-gray rounded-xl overflow-hidden shadow-lg border border-fortnite-gray card-hover transition duration-300">
+                    <img 
+                        src="https://placehold.co/400x250/6c757d/FFFFFF/png?text=Wailing+Woods" 
+                        alt="Image of Wailing Woods"
+                        class="w-full h-40 object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x250/6c757d/FFFFFF/png?text=Location+3';"
+                    >
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold text-white mb-2">Wailing Woods</h4>
+                        <p class="text-sm text-gray-400">Dense forests offering cover and resources, a favorite for players who prefer a stealthier approach to the match.</p>
+                    </div>
+                </div>
+                
+                <!-- Location Card 4 -->
+                <div class="bg-fortnite-gray rounded-xl overflow-hidden shadow-lg border border-fortnite-gray card-hover transition duration-300">
+                    <img 
+                        src="https://placehold.co/400x250/ced4da/FFFFFF/png?text=The+Zero+Point" 
+                        alt="Image of The Zero Point"
+                        class="w-full h-40 object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/400x250/ced4da/FFFFFF/png?text=Location+4';"
+                    >
+                    <div class="p-4">
+                        <h4 class="text-xl font-bold text-white mb-2">The Zero Point</h4>
+                        <p class="text-sm text-gray-400">The nexus of all reality in the Fortnite universe. It controls the loop and drives all major story events.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Skins and Gear Section -->
+        <section id="skins" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <h2 class="text-5xl font-extrabold text-center text-white mb-12 text-shadow-fortnite">
+                SKINS, EMOTES, AND GEAR
+            </h2>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skin Card 1 (Icon Series) -->
+                <div class="relative bg-fortnite-gray rounded-xl p-6 shadow-xl border border-fortnite-blue/50 card-hover transition duration-300">
+                    <span class="absolute top-0 right-0 bg-fortnite-blue text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl">ICON SERIES</span>
+                    <img 
+                        src="https://placehold.co/200x200/4c7399/FFFFFF/png?text=Icon+Skin" 
+                        alt="Image of a popular Icon Series skin"
+                        class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-fortnite-blue"
+                        onerror="this.onerror=null; this.src='https://placehold.co/200x200/4c7399/FFFFFF/png?text=Skin+1';"
+                    >
+                    <h4 class="text-2xl font-bold text-white text-center">The Scythe Dancer</h4>
+                    <p class="text-center text-gray-400 mt-2">A master of the blade with legendary celebrity status. Unlockable via the Battle Pass.</p>
+                </div>
+
+                <!-- Skin Card 2 (OG Skin) -->
+                <div class="relative bg-fortnite-gray rounded-xl p-6 shadow-xl border border-fortnite-accent/50 card-hover transition duration-300">
+                    <span class="absolute top-0 right-0 bg-fortnite-accent text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl">OG LEGEND</span>
+                    <img 
+                        src="https://placehold.co/200x200/77549c/FFFFFF/png?text=OG+Skin" 
+                        alt="Image of a classic OG skin"
+                        class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-fortnite-accent"
+                        onerror="this.onerror=null; this.src='https://placehold.co/200x200/77549c/FFFFFF/png?text=Skin+2';"
+                    >
+                    <h4 class="text-2xl font-bold text-white text-center">The Renegade</h4>
+                    <p class="text-center text-gray-400 mt-2">A relic from the early seasons. Only the true veterans possess this rare cosmetic.</p>
+                </div>
+
+                <!-- Skin Card 3 (Crossover) -->
+                <div class="relative bg-fortnite-gray rounded-xl p-6 shadow-xl border border-fortnite-blue/50 card-hover transition duration-300">
+                    <span class="absolute top-0 right-0 bg-fortnite-blue text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl">CROSSOVER</span>
+                    <img 
+                        src="https://placehold.co/200x200/4c7399/FFFFFF/png?text=Crossover+Skin" 
+                        alt="Image of a crossover skin"
+                        class="w-32 h-32 mx-auto rounded-full object-cover mb-4 border-4 border-fortnite-blue"
+                        onerror="this.onerror=null; this.src='https://placehold.co/200x200/4c7399/FFFFFF/png?text=Skin+3';"
+                    >
+                    <h4 class="text-2xl font-bold text-white text-center">The Dark Avenger</h4>
+                    <p class="text-center text-gray-400 mt-2">When two universes collide. Part of an epic collaboration event.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Creative Mode Call to Action -->
+        <section id="creative" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+            <div class="bg-fortnite-accent/10 p-10 rounded-2xl border-4 border-fortnite-accent shadow-2xl">
+                <h2 class="text-5xl font-extrabold text-fortnite-accent mb-4">
+                    UNLEASH YOUR CREATIVITY
+                </h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                    Fortnite isn't just Battle Royale. Dive into Creative Mode to build your own maps, design unique games, and share them with millions of players worldwide.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <button class="px-8 py-3 bg-fortnite-blue hover:bg-blue-700 text-white text-lg font-bold rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+                        Start Building Today
+                    </button>
+                    <button class="px-8 py-3 bg-white/10 border border-white/20 hover:bg-white/20 text-white text-lg font-bold rounded-full transition duration-300 transform hover:scale-105 shadow-lg">
+                        Browse Popular Maps
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-fortnite-gray border-t border-fortnite-accent/50 mt-12">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+            <div class="text-gray-400 text-sm space-x-4">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Terms of Service</a>
+                <a href="#" class="hover:text-white">Support</a>
+            </div>
+            <p class="mt-4 text-gray-500 text-xs">
+                &copy; 2025 Fortnite Fan Site. All product names, logos, and brands are property of their respective owners.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for smooth scrolling (for modern browsers)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+
+                // Check if the link is just '#' (like the logo link or top links)
+                if (targetId === '#') {
+                    e.preventDefault();
+                    // Scroll to the very top smoothly
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    return;
+                }
+
+                // For valid section links (e.g., #battle-royale)
+                e.preventDefault();
+                
+                // Find the target element
+                const targetElement = document.querySelector(targetId);
+                
+                // Only scroll if the element is found
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
